@@ -2,7 +2,6 @@ import React, { useState, useEffect, useRef } from "react";
 import Grid from "@mui/material/Grid";
 import { Button, Box } from "@mui/material";
 import { urso_niveis } from "../../db.js";
-import "./styles.scss";
 
 const Carta = () => {
   const gerarAleatorio = (num) => Math.floor(Math.random() * num);

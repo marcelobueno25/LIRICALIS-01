@@ -1,4 +1,7 @@
-.notmobile {
+import styled from "styled-components";
+import background from "../../assets/background/papel1.png";
+
+export const NotMobileUI = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -9,7 +12,7 @@
   background-color: rgba(0, 0, 0, 0.7);
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: url("../../assets/background/5.png");
+  background-image: url(${background});
   text-align: center;
   font-weight: bold;
 
@@ -27,4 +30,4 @@
     margin-top: 2em;
     height: 11em;
   }
-}
+`;

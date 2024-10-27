@@ -1,6 +1,6 @@
 import NotMobile from "./pages/NotMobile";
 import Router from "./routes";
-import "./styles/global.scss";
+import "./styles/global.css";
 
 const App = () => {
   const isMobile = window.matchMedia(
