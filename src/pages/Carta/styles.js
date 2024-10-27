@@ -29,3 +29,10 @@ export const MessageUI = styled.h2`
     font-weight: bold;
   }
 `;
+
+export const ParagrafoUI = styled.p`
+  color: #000;
+  font-size: 18px;
+  text-align: center;
+  font-weight: 200;
+`;

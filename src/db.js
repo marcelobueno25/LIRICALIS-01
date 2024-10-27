@@ -19,23 +19,23 @@ export const urso_niveis = {
     {
       id: 1,
       title: "",
-      message: "ESTOU ESPERANDO... ANSIOSAMENTE PELO 'SIM'",
+      message: "Estou esperando... Ansiosamente pelo 'Sim'",
       img: "./images/nv3/2.gif",
     },
   ],
   nv4: [
     {
       id: 1,
-      title: "você realmente quer me ver triste",
-      message: "você não me ama nem um pouco?",
+      title: "",
+      message: "Você não me ama nem um pouco?",
       img: "./images/nv4/2.gif",
     },
   ],
   nv5: [
     {
       id: 1,
-      title: "SABRINA...",
-      message: "VOCÊ TÁ COMEÇANDO A ME IRRITAR DE VERDADE",
+      title: "",
+      message: "Você tá começando a me irritar de verdade",
       img: "./images/nv5/1.gif",
     },
   ],
@@ -43,7 +43,8 @@ export const urso_niveis = {
     {
       id: 1,
       title: "",
-      message: "CHEGAAAAAA, VOCÊ DESPERTOU MINHA IRA... AGORA NÃO TEM ESCOLHA",
+      message:
+        "CHEGAAAAA... Você despertou minha IRA...  AGORA NÃO TEM ESCOLHA",
       img: "./images/nv6/1.gif",
     },
   ],

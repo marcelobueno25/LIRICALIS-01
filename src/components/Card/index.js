@@ -5,8 +5,7 @@ export const Card = ({ children, width, height }) => {
   return (
     <CardUI
       style={{
-        maxWidth: width ? width : 600,
-        maxHeight: height ? height : 400,
+        width: width ? width : 400,
       }}
     >
       {children}

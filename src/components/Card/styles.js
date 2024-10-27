@@ -6,8 +6,7 @@ export const CardUI = styled.div`
   border-radius: 1em;
   height: 100%;
   width: 100%;
-  padding: 1em;
-  padding-top: 2em;
+  padding: 1.5em;
 
   h1,
   h2,
@@ -16,10 +15,5 @@ export const CardUI = styled.div`
   p {
     margin: 0;
     padding: 0;
-  }
-
-  img {
-    display: inline-block;
-    height: 160px;
   }
 `;

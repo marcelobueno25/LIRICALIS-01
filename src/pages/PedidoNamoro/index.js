@@ -2,14 +2,16 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useState, useEffect } from "react";
 import Grid from "@mui/material/Grid2";
-import { Box } from "@mui/material"; // Grid version 2
 import { urso_niveis } from "../../db.js";
 import { Card } from "../../components/Card";
 import { Button } from "../../components/Button/index.js";
 import { useGlobalContext } from "../../Context/GlobalContext.js";
 import { ImageUI, MessageUI } from "./styles.js";
+import ConfettiExplosion from "react-confetti-explosion";
 
 const PedidoNamoro = () => {
+  const [isExploding, setIsExploding] = useState(false);
+
   const { globalVariable, setGlobalVariable } = useGlobalContext();
 
   const gerarAleatorio = (num) => Math.floor(Math.random() * num);
@@ -80,40 +82,48 @@ const PedidoNamoro = () => {
   };
 
   return (
-    <Card>
-      <Grid
-        container
-        direction="column"
-        justifyContent="center"
-        alignItems="stretch"
-        height="100%"
-        spacing={3}
-      >
-        <Grid item xs={12}>
+    <Grid container direction="column" spacing={1}>
+      <Grid item size={12}>
+        <Card>
           <Grid
             container
-            direction="column"
+            spacing={5}
+            direction="row"
             justifyContent="center"
             alignItems="center"
-            height="100%"
-            spacing={3}
           >
-            <Grid item xs={12}>
-              <Box display="flex" alignItems="center" justifyContent="center">
-                <ImageUI>
-                  <img src={emocao.img} alt="" />
-                </ImageUI>
-              </Box>
-            </Grid>
-            <Grid item xs={12}>
-              <Box textAlign="center">
-                <MessageUI>{emocao.message}</MessageUI>
-              </Box>
+            <Grid xs={12}>
+              <MessageUI>
+                Sabrina <span>&</span> Marcelo
+              </MessageUI>
             </Grid>
           </Grid>
-        </Grid>
+        </Card>
+      </Grid>
 
-        <Grid item xs={12}>
+      <Grid item size={12}>
+        <Card>
+          <Grid
+            container
+            direction="row"
+            justifyContent="center"
+            alignItems="center"
+            spacing={3}
+          >
+            <Grid item xs={6}>
+              <ImageUI>
+                <img src={emocao.img} alt="" />
+              </ImageUI>
+            </Grid>
+            <Grid item xs={6}>
+              <MessageUI>{emocao.message}</MessageUI>
+            </Grid>
+          </Grid>
+        </Card>
+      </Grid>
+
+      <Grid item size={12}>
+        <Card>
           <Grid
             container
             spacing={5}
@@ -124,9 +134,24 @@ const PedidoNamoro = () => {
             <Grid xs={6}>
               <Button
                 id="sim"
-                href="https://www.youtube.com/watch?v=HqxhfRuTs8E"
+                onClick={() => {
+                  setIsExploding(!isExploding);
+                  setTimeout(function () {
+                    window.location.href =
+                      "https://www.youtube.com/watch?v=HqxhfRuTs8E";
+                  }, 1000);
+                }}
+                disabled={isExploding}
               >
                 Sim
+                {isExploding && (
+                  <ConfettiExplosion
+                    force={0.6}
+                    duration={2200}
+                    particleCount={100}
+                    width={900}
+                  />
+                )}
               </Button>
             </Grid>
             <Grid xs={6}>
@@ -139,9 +164,9 @@ const PedidoNamoro = () => {
               </Button>
             </Grid>
           </Grid>
-        </Grid>
+        </Card>
       </Grid>
-    </Card>
+    </Grid>
   );
 };
 

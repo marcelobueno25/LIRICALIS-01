@@ -9,6 +9,7 @@ export const ButtonUI = styled.button`
   color: #fff;
   transition: all 0.4s;
   box-shadow: 0px 2px 8px -4px #111;
+  font-size: 18px;
 
   &#nao {
     background-color: #ff6f56;
